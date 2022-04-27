@@ -1,0 +1,36 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>New Brand:</h1>
+
+<form action="/brands" method="post">
+    <label for="name">Brand's Name</label>
+    <input id="name" name="name" type="text">
+    <label for="species">Brand's Species</label>
+    <input id="species" name="species" type="text">
+    <label for="age">Brand's Age</label>
+    <input id="age" name="age" type="number">
+    <label for="gender">Brand's Gender</label>
+    <input id="gender" name="gender" type="text">
+    <button type="submit">Go!</button>
+</form>
+
+<h1>All Brands:</h1>
+
+<ol>
+    @foreach (Brand brand in Model)
+    {
+        <ul>
+            <li>ID: @brand.BrandId</li>
+            <li>Name: @brand.Name</li>
+            <li>Species: @brand.Species</li>
+            <li>Age: @brand.Age</li>
+            <li>Gender: @brand.Gender</li>
+        </ul>
+        <a href="/Brands/Details/@(brand.BrandId)">
+            <p>View Details</p>
+        </a>
+        <br>
+    }
+</ol>

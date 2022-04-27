@@ -1,0 +1,16 @@
+<h1>Edit Info:</h1>
+<form action="/Brands/Details/@(Model.BrandId)" method="post">
+  <label for="name">Brand's Name</label>
+  <input id="name" name="name" type="text" value="@(Model.Name)">
+  <label for="species">Brand's Species</label>
+  <input id="species" name="species" type="text" value="@(Model.Species)">
+  <label for="age">Brand's Age</label>
+  <input id="age" name="age" type="number" value="@(Model.Age)">
+  <label for="gender">Brand's Gender</label>
+  <input id="gender" name="gender" type="text" value="@(Model.Gender)">
+  <button type="submit">Go!</button>
+</form>
+
+<a href="/Brands/Details/@(Model.BrandId)">
+  <p>Return to Details</p>
+</a>

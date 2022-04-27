@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>All Brands:</h1>
+
+<ol>
+    @foreach (Brand brand in Model)
+    {
+        <ul>
+            <li>ID: @brand.BrandId</li>
+            <li>Name: @brand.Name</li>
+            <li>Gender: @brand.Gender</li>
+        </ul>
+        <br>
+    }
+</ol>
